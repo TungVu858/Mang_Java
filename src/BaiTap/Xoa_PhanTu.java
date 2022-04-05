@@ -4,8 +4,14 @@ import java.util.Scanner;
 
 public class Xoa_PhanTu {
     public static void main(String[] args) {
-        int[] arr = {4, 12, 7, 8, 1, 6, 9};
         Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập số phần tử trong mảng : ");
+        int N = sc.nextInt();
+        int [] arr = new int[N];
+        for (int i =0;i<arr.length;i++){
+            System.out.println("Nhập vào phần từ thứ " + i);
+            arr[i] = sc.nextInt();
+        }
         System.out.println("Nhập số cần xóa : ");
         int X = sc.nextInt();
         int viTri = timViTri(arr, X);
