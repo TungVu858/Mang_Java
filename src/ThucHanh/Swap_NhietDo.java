@@ -36,16 +36,26 @@ public class Swap_NhietDo {
                 case 1:
                     System.out.println("Nhập độ F : ");
                     double f = sc.nextDouble();
-                    System.out.println("Độ F qua độ C là : " + ((5.0 / 9) * (f - 32)));
+//                    System.out.println("Độ F qua độ C là : " + ((5.0 / 9) * (f - 32)));
+                    System.out.println("Độ F qua độ C là : " + swapFtoC(f));
                     break;
                 case 2:
                     System.out.println("Nhập độ C : ");
                     double c = sc.nextDouble();
-                    System.out.println("Độ C qua độ F là : " + ((9.0 / 5) * c + 32));
+//                    System.out.println("Độ C qua độ F là : " + ((9.0 / 5) * c + 32));
+                    System.out.println("Độ C qua độ F là : " + swapCtoF(c));
                     break;
                 case 0:
                     System.exit(0);
             }
         }
+    }
+    static double swapCtoF(double c){
+        double f = (9.0 / 5) * c + 32;
+        return f;
+    }
+    static double swapFtoC(double f) {
+        double c = (5.0 / 9) * (f - 32);
+        return c;
     }
 }
